@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+//Adapted Triangle Class using lecture sample code 13 as reference
 namespace u23614286_INF272_Prac08.Models
 {
     public class Triangle : Shape
@@ -45,7 +46,8 @@ namespace u23614286_INF272_Prac08.Models
 
             int x3 = mX + mBase;
             int y3 = mY + mHeight;
-
+            
+            //return an SVG string to draw the triangle
             return "<svg style='border: 1pt dashed #333' height='" + base.SvgHeight + "' width='" + base.SvgWidth + "'>" +
                    "<polygon points='" + x1 + "," + y1 + " " + x2 + "," + y2 + " " + x3 + "," + y3 + "' " +
                    "style='fill:" + base.Fill + ";stroke:" + base.StrokeColour + ";stroke-width:" + base.StrokeWidth + "' /></svg>";

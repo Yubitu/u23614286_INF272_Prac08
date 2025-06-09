@@ -5,6 +5,7 @@ using System.Web;
 
 namespace u23614286_INF272_Prac08.Models
 {
+    //Adapted using Lecture SampleCode from lecture 11
     public class Rectangle : Shape
     {
         private int mX;
@@ -38,7 +39,7 @@ namespace u23614286_INF272_Prac08.Models
             area = mWidth * mHeight;
             return area;
         }
-
+        //Return SVG string to draw rectangle using height and widht
         public override string getSVG()
         {
             return $"<svg style='border: 1pt dashed #333' height='{base.SvgHeight}' width='{base.SvgWidth}'>" +

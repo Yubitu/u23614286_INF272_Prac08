@@ -5,6 +5,7 @@ using System.Web;
 
 namespace u23614286_INF272_Prac08.Models
 {
+    //Adapted ellipse class using lecture sample code 13 as reference
     public class Ellipse : Shape
     {
         private int mX;
@@ -35,6 +36,7 @@ namespace u23614286_INF272_Prac08.Models
             return Math.Round(Math.PI * (mMajorAxis / 2.0) * (mMinorAxis / 2.0), 2);
         }
 
+        //return an svg string for the shape to be drawn. in this case, an elipse has a major axis and a minor axis
         public override string getSVG()
         {
             return "<svg style='border: 1pt dashed #333' height='" + base.SvgHeight + "' width='" + base.SvgWidth + "'>" +

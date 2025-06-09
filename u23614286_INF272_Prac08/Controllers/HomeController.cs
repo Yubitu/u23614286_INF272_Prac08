@@ -9,12 +9,12 @@ namespace u23614286_INF272_Prac08.Controllers
 {
     public class HomeController : Controller
     {
-        // Use the correct base class
+        //use the correct base class
         public static List<Shape> shapes = new List<Shape>();
 
         public ActionResult Index()
         {
-            return View(shapes); // View to display all added shapes
+            return View(shapes); //view to display all added shapes
         }
 
         public ActionResult About()
@@ -23,13 +23,12 @@ namespace u23614286_INF272_Prac08.Controllers
             return View();
         }
 
-        // View for selecting shape type to add
+        //view for selecting shape type to add
         public ActionResult AddShape()
         {
-            return View(); // Should have links/buttons to: Rectangle, Triangle, Ellipse, Square
+            return View(); 
         }
 
-        // ---------------- Rectangle ----------------
         public ActionResult Rectangle()
         {
             return View();
@@ -42,7 +41,6 @@ namespace u23614286_INF272_Prac08.Controllers
             return RedirectToAction("Index");
         }
 
-        // ---------------- Ellipse ----------------
         public ActionResult Ellipse()
         {
             return View();
@@ -55,7 +53,6 @@ namespace u23614286_INF272_Prac08.Controllers
             return RedirectToAction("Index");
         }
 
-        // ---------------- Triangle ----------------
         public ActionResult Triangle()
         {
             return View();
@@ -68,7 +65,7 @@ namespace u23614286_INF272_Prac08.Controllers
             return RedirectToAction("Index");
         }
 
-        // GET: Show the Circle creation form
+        //GET the Circle creation form
         public ActionResult Circle()
         {
             return View();

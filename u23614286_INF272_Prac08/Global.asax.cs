@@ -16,6 +16,8 @@ namespace u23614286_INF272_Prac08
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            u23614286_INF272_Prac08.Controllers.HomeController.shapes.Clear();
         }
     }
 }
