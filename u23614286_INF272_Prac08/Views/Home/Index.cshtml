@@ -1,0 +1,23 @@
+﻿@model IEnumerable<u23614286_INF272_Prac08.Models.Shape>
+
+@{
+    ViewBag.Title = "Display Shapes";
+}
+
+<h2 class="bg-secondary p-3 text-white">Shapes Display</h2>
+
+<div class="text-end mb-3">
+    <a class="btn btn-primary" href="@Url.Action("AddShape", "Home")">Add New Shape</a>
+</div>
+
+@foreach (var shape in Model)
+{
+    <div class="mb-4 border p-3 rounded shadow-sm">
+        <p><strong>Description:</strong> @shape.Description</p>
+        <p><strong>Area:</strong> @shape.getArea()</p>
+
+        <svg style="border: 1px dotted black;" width="450" height="450" xmlns="http://www.w3.org/2000/svg">
+            @Html.Raw(shape.getSVG())
+        </svg>
+    </div>
+}
